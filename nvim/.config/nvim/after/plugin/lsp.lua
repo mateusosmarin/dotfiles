@@ -47,6 +47,18 @@ lsp.on_attach(function(client, bufnr)
     end, opts)
 end)
 
+require("neodev").setup({
+    library = {
+        enabled = true,
+        runtime = true,
+        types = true,
+        plugins = true,
+    },
+    setup_jsonls = true,
+    lspconfig = true,
+    pathStrict = true,
+})
+
 lspconfig.lua_ls.setup({
     settings = {
         Lua = {
