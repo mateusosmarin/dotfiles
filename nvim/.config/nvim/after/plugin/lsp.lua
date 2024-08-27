@@ -77,7 +77,13 @@ lspconfig.yamlls.setup({
                 enable = true,
             },
             schemas = {
-                kubernetes = "*",
+                kubernetes = {
+                    "/home/gh0st/Eureka/git/flip/flip-kubernetes/**/*.yaml",
+                    "/home/gh0st/Eureka/git/flip/imobiliaria-crm/docker/fluentd/fluentd.yaml",
+                    "/home/gh0st/Eureka/git/flip/imobiliaria-crm/kubernetes/*.yaml",
+                    "/home/gh0st/Eureka/git/flip/flip-whatsapp/fluentd.yaml",
+                    "/home/gh0st/Eureka/git/flip/portal-imobiliario-devops/roles/kubernetes/files/**/*.yaml"
+                },
             },
         },
     },
