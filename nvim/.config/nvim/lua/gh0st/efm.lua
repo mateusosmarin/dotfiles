@@ -69,7 +69,7 @@ local languages = {
 }
 
 local settings = {
-    rootMakers = { "./git" },
+    rootMakers = { ".git", "package.json" },
     languages = languages,
     tools = tools,
 }
