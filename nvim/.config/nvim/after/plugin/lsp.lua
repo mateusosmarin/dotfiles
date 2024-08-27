@@ -93,4 +93,21 @@ lspconfig.efm.setup({
     settings = require("gh0st.efm"),
 })
 
+local function organizeImports()
+    local params = {
+        command = "_typescript.organizeImports",
+        arguments = { vim.api.nvim_buf_get_name(0) },
+    }
+    vim.lsp.buf.execute_command(params)
+end
+
+lspconfig.tsserver.setup({
+    commands = {
+        OrganizeImports = {
+            organizeImports,
+            description = "Organize imports",
+        }
+    }
+})
+
 lsp.setup()
