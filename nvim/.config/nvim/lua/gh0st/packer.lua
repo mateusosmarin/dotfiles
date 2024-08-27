@@ -28,9 +28,7 @@ return require("packer").startup(function(use)
             { "neovim/nvim-lspconfig" },
             {
                 "williamboman/mason.nvim",
-                run = function()
-                    pcall(vim.cmd, "MasonUpdate")
-                end,
+                run = function() pcall(vim.cmd, "MasonUpdate") end,
             },
             { "williamboman/mason-lspconfig.nvim" },
             { "hrsh7th/nvim-cmp" },
@@ -46,7 +44,7 @@ return require("packer").startup(function(use)
     use("mfussenegger/nvim-dap")
     use({
         "rcarriga/nvim-dap-ui",
-        requires = { "mfussenegger/nvim-dap" },
+        requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     })
 
     use({
@@ -63,4 +61,13 @@ return require("packer").startup(function(use)
         "folke/trouble.nvim",
         requires = { "nvim-tree/nvim-web-devicons" },
     })
+
+    use("tpope/vim-surround")
+    use("tpope/vim-unimpaired")
+    use("tpope/vim-repeat")
+    use("tpope/vim-commentary")
+
+    use("mattn/emmet-vim")
+
+    use("LunarVim/bigfile.nvim")
 end)
