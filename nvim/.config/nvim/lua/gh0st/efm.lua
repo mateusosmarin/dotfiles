@@ -52,6 +52,7 @@ local languages = {
     javascript = { tools.prettier, },
     javascriptreact = { tools.prettier, },
     json = { tools.jq, },
+    jsonc = { tools.jq, },
     yaml = { tools.prettier, },
     terraform = { tools.terraformfmt, },
     python = { tools.autopep8, },
