@@ -36,3 +36,4 @@ vim.g.mapleader = " "
 
 vim.env.PATH = '/home/gh0st/.asdf/installs/nodejs/lts-gallium/bin' .. ':' .. vim.env.PATH
 vim.g.node_host_prog = '/home/gh0st/.asdf/installs/nodejs/lts-gallium/.npm/lib/node_modules/neovim'
+vim.g.python3_host_prog = '/home/gh0st/.asdf/installs/python/3.12.1/bin/python'
