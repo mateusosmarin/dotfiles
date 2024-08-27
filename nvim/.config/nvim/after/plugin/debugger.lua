@@ -21,7 +21,15 @@ for _, language in ipairs({ "typescript", "javascript" }) do
             type = "pwa-node",
             request = "attach",
             name = "Attach",
-            processId = require 'dap.utils'.pick_process,
+            port = function()
+                local port = vim.fn.input('Port (default 9229) > ')
+                if string.len(port) > 0 then
+                    return port
+                else
+                    return 9229
+                end
+            end,
+            -- processId = require 'dap.utils'.pick_process,
             cwd = "${workspaceFolder}",
         },
         {
