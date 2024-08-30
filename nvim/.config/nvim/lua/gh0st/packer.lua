@@ -67,7 +67,5 @@ return require("packer").startup(function(use)
     use("tpope/vim-repeat")
     use("tpope/vim-commentary")
 
-    use("mattn/emmet-vim")
-
     use("LunarVim/bigfile.nvim")
 end)
