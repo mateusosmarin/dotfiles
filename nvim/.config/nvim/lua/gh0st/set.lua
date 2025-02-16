@@ -34,6 +34,5 @@ vim.opt.clipboard = "unnamed"
 
 vim.g.mapleader = " "
 
-vim.env.PATH = '/home/gh0st/.asdf/installs/nodejs/lts-gallium/bin' .. ':' .. vim.env.PATH
-vim.g.node_host_prog = '/home/gh0st/.asdf/installs/nodejs/lts-gallium/.npm/lib/node_modules/neovim'
-vim.g.python3_host_prog = '/home/gh0st/.asdf/installs/python/3.12.1/bin/python'
+vim.g.node_host_prog = os.getenv("HOME") .. '/.asdf/installs/nodejs/22.14.0/lib/node_modules/neovim/bin/cli.js'
+vim.g.python3_host_prog = os.getenv("HOME") .. '/.asdf/installs/python/3.13.2/bin/python3'
